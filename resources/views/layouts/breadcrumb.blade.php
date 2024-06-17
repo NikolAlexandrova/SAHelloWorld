@@ -3,11 +3,10 @@
 
     if ($page == "news")
         $pagetitle = "Our Blog & News";
-    elseif ($page = "activities")
+    elseif ($page == "activities")
         $pagetitle = "Activities";
-    elseif ($page = "about")
+    elseif ($page == "about")
         $pagetitle = "About Us";
-
 @endphp
 
 

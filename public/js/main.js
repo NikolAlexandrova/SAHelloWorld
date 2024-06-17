@@ -26,7 +26,7 @@
     $(".header-carousel").owlCarousel({
         animateOut: 'slideOutLeft',
         items: 1,
-        autoplay: true,
+        autoplay: false,
         smartSpeed: 1000,
         dots: true,
         loop: true,

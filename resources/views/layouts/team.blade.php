@@ -3,7 +3,7 @@
     <div class="container py-5">
         <div class="pb-5">
             <h4 class="text-secondary sub-title fw-bold wow fadeInUp" data-wow-delay="0.1s">Our Team</h4>
-            <h1 class="display-2 mb-0 wow fadeInUp" data-wow-delay="0.3s">Activities Team</h1>
+            <h1 class="display-2 mb-0 wow fadeInUp" data-wow-delay="0.3s">SA Hello World Team</h1>
         </div>
         <div class="team-carousel owl-carousel pt-5 wow fadeInUp" data-wow-delay="0.1s">
             <div class="team-item border rounded wow fadeInUp" data-wow-delay="0.1s">

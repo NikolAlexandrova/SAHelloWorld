@@ -156,7 +156,15 @@
                                         @endisset
                                     </form>
                                 </div>
-                            </div>
+
+                                <!-- List of files -->
+                            <ul class="mt-4">
+                                @foreach ($files as $file)
+                                    <li>
+                                        <a href="{{ Storage::url($file) }}" target="_blank">{{ basename($file) }}</a>
+                                    </li>
+                                @endforeach
+                            </ul>
                         </div>
                     </div>
                 </div>

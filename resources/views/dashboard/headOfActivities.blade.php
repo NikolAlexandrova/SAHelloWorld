@@ -22,14 +22,13 @@
                         <li class="nav-item">
                             <a class="nav-link" id="budget-tab" data-toggle="tab" href="#budget" role="tab" aria-controls="budget" aria-selected="false">Budget</a>
                         </li>
-
                         <li class="nav-item">
                             <a class="nav-link" id="manage-activities-tab" data-toggle="tab" href="#manage-activities" role="tab" aria-controls="manage-activities" aria-selected="false">Manage Activities</a>
-
-                        <li class="nav-item" role="presentation">
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" id="notifications-tab" data-toggle="tab" href="#notifications" role="tab" aria-controls="notifications" aria-selected="false">Notifications</a>
                         </li>
-                        <li class="nav-item" role="presentation">
+                        <li class="nav-item">
                             <a class="nav-link" id="calendar-tab" data-toggle="tab" href="#calendar" role="tab" aria-controls="calendar" aria-selected="false">Calendar</a>
                         </li>
                     </ul>
@@ -40,7 +39,6 @@
                         <div class="tab-pane fade show active" id="activities" role="tabpanel" aria-labelledby="activities-tab">
                             @include('activities.create')
                         </div>
-
 
                         <!-- Notes Tab -->
                         <div class="tab-pane fade" id="notes" role="tabpanel" aria-labelledby="notes-tab">
@@ -69,10 +67,12 @@
                                     </ul>
                                 @endisset
                             </div>
-                    <!-- Notifications Tab Content -->
-                    <div class="tab-pane fade" id="notifications" role="tabpanel" aria-labelledby="notifications-tab">
-                        @include('dashboard.notifications')
-                    </div>
+                        </div>
+
+                        <!-- Notifications Tab -->
+                        <div class="tab-pane fade" id="notifications" role="tabpanel" aria-labelledby="notifications-tab">
+                            @include('dashboard.notifications')
+                        </div>
 
                         <!-- Budget Tab -->
                         <div class="tab-pane fade" id="budget" role="tabpanel" aria-labelledby="budget-tab">
@@ -117,9 +117,11 @@
                                 </tbody>
                             </table>
                         </div>
-                    </div>
-                    <div class="tab-pane fade" id="calendar" role="tabpanel" aria-labelledby="calendar-tab">
-                        @include('dashboard.calendar')
+
+                        <!-- Calendar Tab -->
+                        <div class="tab-pane fade" id="calendar" role="tabpanel" aria-labelledby="calendar-tab">
+                            @include('dashboard.calendar')
+                        </div>
                     </div>
                 </div>
             </div>

@@ -152,11 +152,10 @@
                                     @endforeach
                                 </ul>
                             </div>
-
+                        </div>
                         <div class="tab-pane fade" id="calendar" role="tabpanel" aria-labelledby="calendar-tab">
                             @include('dashboard.calendar')
                         </div>
-
                     </div>
                 </div>
             </div>

@@ -93,6 +93,11 @@
                             </div>
                         </div>
 
+                        <!-- Notifications Tab Content -->
+                        <div class="tab-pane fade" id="notifications" role="tabpanel" aria-labelledby="notifications-tab">
+                            @include('dashboard.notifications')
+                        </div>
+
                         <!-- Notes Tab -->
                         <div class="tab-pane fade" id="notes" role="tabpanel" aria-labelledby="notes-tab">
                             <h3>Notes</h3>
@@ -170,15 +175,14 @@
                                             </select>
                                         </div>
                                         <div class="form-group">
-                                            <label for="users">Select users to share with</label>
-                                            <select multiple class="form-control" id="users" name="users[]" required>
-                                                @foreach ($users as $user)
-                                                    <option value="{{ $user->id }}">{{ $user->name }}</option>
-                                                @endforeach
-                                            </select>
-                                        </div>
-                                        <button type="submit
-                                        class="btn btn-primary">Share Files</button>
+                                            <label for="users"><label for="users">Select users to share with</label>
+                                                <select multiple class="form-control" id="users" name="users[]" required>
+                                                    @foreach ($users as $user)
+                                                        <option value="{{ $user->id }}">{{ $user->name }}</option>
+                                                    @endforeach
+                                                </select>
+
+                                        <button type="submit" class="btn btn-primary">Share Files</button>
 
                                         @isset($mailtoLinks)
                                             @foreach($mailtoLinks as $link)
@@ -199,22 +203,16 @@
                                 @endforeach
                             </ul>
                         </div>
+                    </div>
 
-                        <!-- Notifications Tab Content -->
-                        <div class="tab-pane fade" id="notifications" role="tabpanel" aria-labelledby="notifications-tab">
-                            @include('dashboard.notifications')
-                        </div>
-
-                        <!-- Calendar Tab Content -->
+                        <!-- Calendar Tab -->
                         <div class="tab-pane fade" id="calendar" role="tabpanel" aria-labelledby="calendar-tab">
                             @include('dashboard.calendar')
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
     <!-- Include Bootstrap JavaScript and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

@@ -9,65 +9,21 @@
 
         <div class="blog-carousel owl-carousel pt-5 wow fadeInUp" data-wow-delay="0.1s">
 
-            <div class="blog-item bg-white rounded wow fadeInUp" data-wow-delay="0.1s">
-                <div class="blog-img rounded-top">
-                    <img src="/img/class-1.jpg" class="img-fluid rounded-top w-100" alt="Image">
-                </div>
-                <div class="bg-light rounded-bottom p-4">
-                    <div class="d-flex justify-content-between mb-4">
-                        <a href="#" class="text-muted"><i class="fa fa-calendar-alt text-primary"></i> 28 August 2021</a>
-                        <a href="#" class="text-muted"><span class="fa fa-comments text-primary"></span> 3 Comments</a>
+            @foreach($articles as $article)
+                <div class="blog-item bg-white rounded wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="blog-img rounded-top">
+                        <img src="{{ Storage::url($article->articles_img) }}" class="img-fluid rounded-top w-100" alt="Image">
                     </div>
-                    <a href="#" class="h4 mb-3 d-block">Lorem ipsum dolor</a>
-                    <p class="mb-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni vero excepturi blanditiis quidem</p>
-                    <a class="btn btn-primary rounded-pill text-white py-2 px-4" href="#">Read More</a>
-                </div>
-            </div>
-
-            <div class="blog-item bg-white rounded wow fadeInUp" data-wow-delay="0.3s">
-                <div class="blog-img rounded-top">
-                    <img src="/img/class-2.jpg" class="img-fluid rounded-top w-100" alt="Image">
-                </div>
-                <div class="bg-light rounded-bottom p-4">
-                    <div class="d-flex justify-content-between mb-4">
-                        <a href="#" class="text-muted"><i class="fa fa-calendar-alt text-primary"></i> 28 August 2021</a>
-                        <a href="#" class="text-muted"><span class="fa fa-comments text-primary"></span> 3 Comments</a>
+                    <div class="bg-light rounded-bottom p-4">
+                        <div class="d-flex justify-content-between mb-4">
+                            <a href="#" class="text-muted"><i class="fa fa-calendar-alt text-primary"></i> {{ \Carbon\Carbon::parse($article->published_on)->format('d F Y') }}</a>
+                        </div>
+                        <a href="{{ route('articles.show', $article->articlesID) }}" class="h4 mb-3 d-block">{{ $article->title }}</a>
+                        <p class="mb-3">{{ Str::limit($article->body, 100) }}</p>
+                        <a class="btn btn-primary rounded-pill text-white py-2 px-4" href="{{ route('articles.show', $article->articlesID) }}">Read More</a>
                     </div>
-                    <a href="#" class="h4 mb-3 d-block">Lorem ipsum dolor</a>
-                    <p class="mb-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni vero excepturi blanditiis quidem</p>
-                    <a class="btn btn-primary rounded-pill text-white py-2 px-4" href="#">Read More</a>
                 </div>
-            </div>
-
-            <div class="blog-item bg-white rounded wow fadeInUp" data-wow-delay="0.5s">
-                <div class="blog-img rounded-top">
-                    <img src="/img/class-3.jpg" class="img-fluid rounded-top w-100" alt="Image">
-                </div>
-                <div class="bg-light rounded-bottom p-4">
-                    <div class="d-flex justify-content-between mb-4">
-                        <a href="#" class="text-muted"><i class="fa fa-calendar-alt text-primary"></i> 28 August 2021</a>
-                        <a href="#" class="text-muted"><span class="fa fa-comments text-primary"></span> 3 Comments</a>
-                    </div>
-                    <a href="#" class="h4 mb-3 d-block">Lorem ipsum dolor</a>
-                    <p class="mb-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni vero excepturi blanditiis quidem</p>
-                    <a class="btn btn-primary rounded-pill text-white py-2 px-4" href="#">Read More</a>
-                </div>
-            </div>
-
-            <div class="blog-item bg-white rounded wow fadeInUp" data-wow-delay="0.7s">
-                <div class="blog-img rounded-top">
-                    <img src="/img/class-1.jpg" class="img-fluid rounded-top w-100" alt="Image">
-                </div>
-                <div class="bg-light rounded-bottom p-4">
-                    <div class="d-flex justify-content-between mb-4">
-                        <a href="#" class="text-muted"><i class="fa fa-calendar-alt text-primary"></i> 28 August 2021</a>
-                        <a href="#" class="text-muted"><span class="fa fa-comments text-primary"></span> 3 Comments</a>
-                    </div>
-                    <a href="#" class="h4 mb-3 d-block">Lorem ipsum dolor</a>
-                    <p class="mb-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni vero excepturi blanditiis quidem</p>
-                    <a class="btn btn-primary rounded-pill text-white py-2 px-4" href="#">Read More</a>
-                </div>
-            </div>
+            @endforeach
 
         </div>
     </div>

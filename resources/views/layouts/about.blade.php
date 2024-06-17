@@ -12,7 +12,7 @@
                 <h1 class="display-3 mb-4 white"><strong class="text-secondary">SA Hello World</strong>, We have been organising events since 2016.</h1>
                 <p>Study association “Hello World” is the study association for all students of the HBO-ICT program of the HZ University of Applied Sciences.
                 </p>
-                <p class="mb-4"><strong class="text-secondary">A (short) histor:y</strong>
+                <p class="mb-4"><strong class="text-secondary">A (short) history:</strong>
                     SA “Hello World” is a young study association and only officialy exists since the 27th of june, 2016 founded by ‘Maaike Brouwer, Thijs Clowting, Carlo Geertse, Loek van der Line and Raymon de Looff’. In an unofficial form we have been organizing all kinds of activities for the education since march 2015. We started the study association because we want to create more cohesion between the years, organize fun activities for all students of HBO-ICT and contribute to the smooth running of your study by serving as a point of contact for the students.
                 </p>
                 <p class="mb-4">

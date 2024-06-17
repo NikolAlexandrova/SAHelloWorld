@@ -14,14 +14,14 @@ class UserRolesPermission extends Seeder
     {
         // Get existing users by email
         $users = [
-            'chairman' => 'chairman@hz.nl',
+            'chairman' => 'mura0005@hz.nl',
             'activities committee member' => 'george123@hz.nl',
             'board member' => 'boardmember@hz.nl',
-            'head of activities' => 'head_of_activities@hz.nl',
-            'head of media' => 'head_of_media@hz.nl',
+            'head of activities' => 'erk0002@hz.nl',
+            'head of media' => 'mart0143@hz.nl',
             'media team member' => 'media_team_member@hz.nl',
-            'secretary' => 'secretary@hz.nl',
-            'treasurer' => 'treasurer@hz.nl',
+            'secretary' => 'alex0031@hz.nl',
+            'treasurer' => 'grig0009@hz.nl',
             'paid member' => 'paid_member@hz.nl',
         ];
 

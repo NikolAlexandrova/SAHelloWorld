@@ -72,6 +72,7 @@ Route::get('/dashboard/mediaTeamMember', [HomeController::class, 'mediaTeamMembe
     ->middleware(['auth', 'verified', 'role:media team member'])
     ->name('dashboard.mediaTeamMember');
 
+Route::get('/news', [ArticleController::class, 'publicNews'])->name('news');
 // Public route for viewing articles
 Route::get('/articles/{id}', [ArticleController::class, 'show'])->name('articles.show');
 
@@ -113,10 +114,6 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
-
-Route::get('/news', function () {
-    return view('news');
-})->name('news');
 
 //when logged in
 Route::get('/dashboard/about', function () {

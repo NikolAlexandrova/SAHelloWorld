@@ -25,6 +25,16 @@ class ArticleController extends Controller
         return view('dashboard', compact('articles'));
     }
 
+    public function publicNews()
+{
+    $articles = Article::where('is_posted', true)
+        ->where('is_archived', false)
+        ->where('published_on', '<=', now())
+        ->orderBy('published_on', 'desc')
+        ->get();
+    return view('news', compact('articles'));
+}
+
     public function create()
     {
         return view('articles.create');
